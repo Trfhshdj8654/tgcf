@@ -106,8 +106,8 @@ if check_password(st):
                     if st.button(f"Remove connection **{label}**"):
                         del CONFIG.forwards[i]
                         write_config(CONFIG)
-                        st.rerun()
+                        st.experimental_rerun()
 
     if st.button("Save"):
         write_config(CONFIG)
-        st.rerun()
+        st.experimental_rerun()
